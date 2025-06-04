@@ -8,8 +8,12 @@ const Quiz03 = () => {
       { id: 3, name: '파이리', img: '/images/파이리.png' },
    ])
 
+   const [inputName, setInputName] = useState('')
+   // const [inputImg, setInputImg] = useState()
+   const [nextId, setNextId] = useState(4)
+
    const pokesList = pokemons.map((poke) => (
-      <li key={poke.id}>
+      <li key={poke.id} onDoubleClick={() => onRemove(poke.id)}>
          <div>
             <img src={poke.img} alt={poke.name} width="130" />
             <p>{poke.name}</p>
@@ -17,11 +21,20 @@ const Quiz03 = () => {
       </li>
    ))
 
+   const onClick = () => {
+      const nextPoke = pokemons.concat({})
+   }
+
+   const onRemove = (id) => {
+      const nextPoke = pokemons.filter((poke) => poke.id !== id)
+      setPoke(nextPoke)
+   }
+
    return (
       <>
          <h2>포켓몬 도감</h2>
-         <input></input>
-         <button>등록</button>
+         <input type="text" value={inputName}></input>
+         <button onClick={onClick}>등록</button>
          <ul>{pokesList}</ul>
       </>
    )

@@ -20,6 +20,8 @@ const Quiz01 = () => {
 
    const onClick = () => {
       // 이 부분 작성
+      let val = Number(val1) + Number(val2) + Number(val3)
+      alert(`더한값: ${val}`)
    }
 
    const onKeyDown = (e) => {
