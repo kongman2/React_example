@@ -9,21 +9,11 @@ const Quiz03 = () => {
    ])
 
    const [inputName, setInputName] = useState('')
-   const [nextId, setNextId] = useState('')
+   const [nextId, setNextId] = useState(4)
 
    const onChange = (e) => setInputName(e.target.value)
 
-   const onClick = () => {
-      const nextPokes = pokemons.concat({
-         id: nextId,
-         name: inputName,
-         img: './imges/' + inputName + '.png',
-      })
-      setPoke(nextPokes)
-      setNextId(nextId + 1)
-      setInputName(inputName)
-   }
-   const pokemonsList = pokemons.map((poke) => (
+   const pokesList = pokemons.map((poke) => (
       <li key={poke.id} onDoubleClick={() => onRemove(poke.id)}>
          <div>
             <img src={poke.img} alt={poke.name} width="130" />
@@ -32,17 +22,31 @@ const Quiz03 = () => {
       </li>
    ))
 
+   //concat() 2개 이상의 배열을 합치는 메소드
+
+   const onClick = () => {
+      const nextPoke = pokemons.concat({
+         id: nextId,
+         name: inputName,
+         img: './images/' + inputName + '.png',
+         // 입력받은 이름을 이용해서 이미지 가져옴
+      })
+      setPoke(nextPoke)
+      setNextId(nextId + 1)
+      setInputName(inputName)
+   }
+
    const onRemove = (id) => {
-      const nextPokes = pokemons.filter((poke) => poke.id !== id)
-      setPoke(nextPokes)
+      const nextPoke = pokemons.filter((poke) => poke.id !== id)
+      setPoke(nextPoke)
    }
 
    return (
       <>
          <h2>포켓몬 도감</h2>
-         <input type="text" value={inputName} onChange={onChange} />
+         <input type="text" value={inputName} onChange={onChange}></input>
          <button onClick={onClick}>등록</button>
-         <ul>{pokemonsList}</ul>
+         <ul>{pokesList}</ul>
       </>
    )
 }

@@ -11,9 +11,11 @@ function Quiz02() {
    const [nextId, setNextId] = useState(3)
 
    const onChangeName = (e) => setInputName(e.target.value)
+   // select 박스에서는 option태그의 value속성값을 가져온다.
    const onChangeStatus = (e) => setInputStatus(e.target.value)
 
    const onClick = () => {
+      if (inputName.trim() === '') return // 빈 값은 추가하지 않음
       const nextProjects = projects.concat({
          id: nextId,
          name: inputName,

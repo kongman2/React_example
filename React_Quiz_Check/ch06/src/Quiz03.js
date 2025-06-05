@@ -4,8 +4,9 @@ function Quiz03() {
    const [count, setCount] = useState(0)
 
    useEffect(() => {
+      console.log('Count changed')
       // 여기에 코드를 작성하세요
-   }, []) // 이 부분을 수정하세요
+   }, [count]) // 이 부분을 수정하세요
 
    return (
       <div>
