@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 
 function Quiz02_1() {
    const [items, setItems] = useState([])
    const [text, setText] = useState('')
 
-   const handleChange = (event) => {
+   const handleChange = useCallback((event) => {
       setText(event.target.value)
-   }
+   }, [])
 
-   const handleSubmit = (event) => {
-      event.preventDefault()
-      setItems([...items, text])
-      setText('')
-   }
+   const handleSubmit = useCallback(
+      (event) => {
+         event.preventDefault()
+         setItems([...items, text])
+         setText('')
+      },
+      [items, text]
+   )
 
    return (
       <div>

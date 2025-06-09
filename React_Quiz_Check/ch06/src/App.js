@@ -11,9 +11,9 @@ function App() {
    // return <Quiz02 />
    // return <Quiz03 />
    // return <Quiz04 />
-   return <Quiz05 />
+   // return <Quiz05 />
    // return <Quiz06 />
-   // return <Quiz07 />
+   return <Quiz07 />
 }
 
 export default App
