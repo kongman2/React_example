@@ -1,7 +1,17 @@
 import styled, { keyframes } from 'styled-components'
 
 const move = keyframes`
-   /* 여기에 코드 작성 */
+0% {
+transform: translateX(0%);
+}
+50%{
+   transform: translateX(100%);
+
+}
+100%{
+   transform: translateX(0%);
+
+}
 `
 
 const Ball = styled.div`

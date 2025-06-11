@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
-   /* 여기에 코드 작성 */
+   color: white;
+   background-color: ${(props) => (props.primary ? 'blue' : 'gray')};
 `
 
 function Quiz02() {
    return (
       <div>
-         <Button color="blue">Blue Button</Button>
+         <Button primary>Blue Button</Button>
          <Button>Gray Button</Button>
       </div>
    )

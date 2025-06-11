@@ -1,4 +1,4 @@
-import { Routes } from 'react-router-dom'
+import { NavLink, Routes } from 'react-router-dom'
 
 var contents = [
    { id: 1, title: '기사제목1', description: '기사내용. 어쩌고 저쩌고...' },
@@ -9,7 +9,11 @@ var contents = [
 function NewsList2() {
    var list = []
    for (var i = 0; i < contents.length; i++) {
-      // 여기에 코드 작성
+      list.push(
+         <li key={contents[i].id}>
+            <NavLink to={'/newsList' + contents[i].id}>{contents[i].title}</NavLink>
+         </li>
+      )
    }
    return (
       <div>
