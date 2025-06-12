@@ -1,11 +1,21 @@
 const initialState = { count: 0 }
 
 function counterReducer(state = initialState, action) {
+   // 증가
+   // action = { type: 'increment' }
+   // state= { count: 0 }
+
+   //감소
+   // action = { type: 'decrement' }
+   // state= { count: 1 }
+
    switch (action.type) {
       case 'increment':
-      // 여기에 코드 작성(숫자를 감소 시킴)
+         //  return 하면 state= { count: 1 }
+         return { count: state.count + 1 }
       case 'decrement':
-      // 여기에 코드 작성(숫자를 증가 시킴)
+         //  return 하면 state= { count: 0 }
+         return { count: state.count - 1 }
       default:
          return state
    }

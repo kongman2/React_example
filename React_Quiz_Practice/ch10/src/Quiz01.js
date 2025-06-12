@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+//const StyledInput = styled.input.attr({ type="text" , placeholder='입력란',})`
 const StyledInput = styled.input`
    background-color: skyblue;
 `

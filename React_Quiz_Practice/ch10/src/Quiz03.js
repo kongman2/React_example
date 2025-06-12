@@ -4,7 +4,7 @@ const Card = styled.div`
    border: 1px solid black;
 
    &:hover {
-      border: 1px solid red;
+      border-color: red;
    }
 `
 
