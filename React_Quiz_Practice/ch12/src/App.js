@@ -8,8 +8,8 @@ import { Provider } from 'react-redux'
 // import AuthStatus from './Quiz02/AuthStatus'
 
 //3번 퀴즈
-// import storeQuiz03 from './Quiz03/store'
-// import ProductList from './Quiz03/ProductList'
+import storeQuiz03 from './Quiz03/store'
+import ProductList from './Quiz03/ProductList'
 
 function App() {
    // return (
@@ -22,11 +22,11 @@ function App() {
    //       <AuthStatus />
    //    </Provider>
    // )
-   // return (
-   //    <Provider store={storeQuiz03}>
-   //       <ProductList />
-   //    </Provider>
-   // )
+   return (
+      <Provider store={storeQuiz03}>
+         <ProductList />
+      </Provider>
+   )
 }
 
 export default App

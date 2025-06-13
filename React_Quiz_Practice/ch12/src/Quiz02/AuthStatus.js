@@ -8,9 +8,27 @@ function AuthStatus() {
    return (
       <div>
          {isAuthenticated ? (
-         // 여기에 코드 작성
+            <div>
+               <p>로그인이 완료되었습니다!</p>
+               <button
+                  onClick={() => {
+                     dispatch(logout())
+                  }}
+               >
+                  로그아웃
+               </button>
+            </div>
          ) : (
-         //   여기에 코드 작성
+            <div>
+               <p>로그인하세요!</p>
+               <button
+                  onClick={() => {
+                     dispatch(login())
+                  }}
+               >
+                  로그인
+               </button>
+            </div>
          )}
       </div>
    )
