@@ -26,17 +26,17 @@ var contents = [
 ]
 
 function Topic() {
-   var params = useParams() // 경로 파라메터를 가져온다
-   var topic_id = params.topic_id // test
-   var selected_topic = {
+   const params = useParams() // 경로 파라메터를 가져온다
+   const topic_id = params.topic_id // test
+   let selected_topic = {
       title: 'Sorry',
       description: 'Not Found',
    }
 
-   for (var i = 0; i < contents.length; i++) {
-      // contents에서 id가 같은 데이터를 찾은 후 selected_topic에 넣어준다
-      if (contents[i].id === Number(topic_id)) {
-         selected_topic = contents[i]
+   // contents에서 id가 같은 데이터를 찾은 후 selected_topic에 넣어준다
+   for (const content of contents) {
+      if (content.id === Number(topic_id)) {
+         selected_topic = content
          break //찾은 이후에는 for 문을 빠져나옴
       }
    }
@@ -50,14 +50,11 @@ function Topic() {
 }
 
 function Topics() {
-   var lis = []
-   for (var i = 0; i < contents.length; i++) {
-      lis.push(
-         <li key={contents[i].id}>
-            <NavLink to={'/topics/' + contents[i].id}>{contents[i].title}</NavLink>
-         </li>
-      )
-   }
+   const lis = contents.map((content) => (
+      <li key={content.id}>
+         <NavLink to={`/topics/${content.id}`}>{content.title}</NavLink>
+      </li>
+   ))
 
    return (
       <div>

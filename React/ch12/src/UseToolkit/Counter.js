@@ -13,7 +13,7 @@ function Counter() {
       <div>
          <button
             onClick={() => {
-               // 툴킷 에서는 액션 크리에이터를 생성해준다
+               // 툴킷에서는 액션 생성자 함수를 자동을 생성해준다
                // dispatch(counterSlice.actions.up(2))
                dispatch(up(2))
             }}
@@ -22,7 +22,6 @@ function Counter() {
          </button>
          <button
             onClick={() => {
-               // 툴킷 에서는 액션 크리에이터를 생성해준다
                // dispatch(counterSlice.actions.down(2))
                dispatch(down(2))
             }}

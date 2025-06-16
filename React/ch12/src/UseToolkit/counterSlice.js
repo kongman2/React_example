@@ -4,7 +4,6 @@ const counterSlice = createSlice({
    name: 'counterSlice', //slice의 이름
    initialState: { value: 0 }, //state의 초기값
    reducers: {
-      //reducer
       up: (state, action) => {
          state.value += action.payload
       },

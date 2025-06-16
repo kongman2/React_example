@@ -29,6 +29,15 @@ function Contact() {
    )
 }
 
+/*
+ a태그로 링크 이동시 페이지가 전체 새로고침 되면서 모든 DOM들이 다시 렌더링이 된다.
+ -> MPA 방식
+
+ <Link> 컴포넌트로 이동시 바뀐 부분의 DOM만 리렌더링이 된다.
+ -> SPA 방식
+ -> 리액트는 기본적으로 SPA 방식으로 동작하므로 <Link> 컴포넌트 사용을 추천
+*/
+
 function App() {
    return (
       <div>

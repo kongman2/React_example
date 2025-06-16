@@ -17,14 +17,12 @@ var contents = [
 ]
 
 function Topics() {
-   var lis = []
-   for (var i = 0; i < contents.length; i++) {
-      lis.push(
-         <li key={contents[i].id}>
-            <NavLink to={'/topics/' + contents[i].id}>{contents[i].title}</NavLink>
-         </li>
-      )
-   }
+   const lis = contents.map((content) => (
+      <li key={content.id}>
+         <NavLink to={`/topics/${content.id}`}>{content.title}</NavLink>
+      </li>
+   ))
+
    return (
       <div>
          <h2>Topics</h2>

@@ -18,6 +18,8 @@ function App() {
       <Provider store={storeUseToolkit}>
          <div>
             <Counter />
+            <br />
+            <br />
             <User />
          </div>
       </Provider>

@@ -8,13 +8,13 @@ import ConcatEx from './ConcatEx'
 import PushEx from './PushEx'
 
 function App() {
-   //return <IterationSample />
+   return <IterationSample />
    //return <IterationSample2 />
    //return <IterationSample3 />
-   //return <IterationSample4 />
-   //return <IterationSample5 />
+   // return <IterationSample4 />
+   // return <IterationSample5 />
    // return <IterationSample6 />
-   return <ConcatEx />
+   // return <ConcatEx />
    // return <PushEx />
 }
 

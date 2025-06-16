@@ -10,7 +10,7 @@ const UseEffectEX = () => {
    //       console.log({ name, nickname })
    //    })
 
-   //2. 맨 처음 렌더링이 될때만 실행되고, 업데이트 될때는 실행되지 않음
+   //2. 맨 처음 렌더링이 될때만 실행되고, 리렌더링 될때는 실행되지 않음
    //    useEffect(() => {
    //       console.log('렌더링이 완료되었습니다')
    //       console.log({ name, nickname })
@@ -22,13 +22,13 @@ const UseEffectEX = () => {
    //       console.log({ name, nickname })
    //    }, [name])
 
-   // 4. 뒷정리 함수: 컴포넌트가 업데이트 되기 전에 실행
+   // 4. 뒷정리 함수: 컴포넌트가 리렌더링 되기 전에 실행
    useEffect(() => {
       console.log('렌더링이 완료되었습니다')
       console.log(name)
 
       return () => {
-         console.log('컴포넌트가 업데이트 되기전..')
+         console.log('컴포넌트가 리렌더링 되기전..')
          console.log(name)
       }
    }, [])

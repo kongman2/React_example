@@ -17,16 +17,4 @@ const MyComponent = ({ name = '기본이름', job, forNumber, children }) => {
    )
 }
 
-/*
-앞으로 사라질 예정
-MyComponent.defaultProps = {
-   name: '기본이름',
-}
-*/
-
-MyComponent.propTypes = {
-   name: PropTypes.string,
-   forNumber: PropTypes.number.isRequired,
-}
-
 export default MyComponent

@@ -13,6 +13,13 @@ function Counter() {
          >
             +
          </button>
+         <button
+            onClick={() => {
+               dispatch({ type: 'down', step: 2 })
+            }}
+         >
+            -
+         </button>
          {count}
       </div>
    )

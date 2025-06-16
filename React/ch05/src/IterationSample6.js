@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function IterationSample5() {
+function IterationSample6() {
    const [names, setNames] = useState([
       { id: 1, text: '눈사람' },
       { id: 2, text: '얼음' },
@@ -59,4 +59,4 @@ function IterationSample5() {
    )
 }
 
-export default IterationSample5
+export default IterationSample6
