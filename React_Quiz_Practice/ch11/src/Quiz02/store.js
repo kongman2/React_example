@@ -1,7 +1,6 @@
 import { createStore } from 'redux'
-import counterReducer from './counterReducer' // 리듀서 파일에서 가져오기
+import numberReducer from './numberReducer'
 
-// store에는 reducer, state 저장
-const store = createStore(counterReducer)
+const store = createStore(numberReducer)
 
 export default store

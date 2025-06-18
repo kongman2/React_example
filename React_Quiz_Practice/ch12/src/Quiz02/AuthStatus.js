@@ -6,28 +6,16 @@ function AuthStatus() {
    const dispatch = useDispatch()
 
    return (
-      <div>
+      <div style={{ padding: '20px' }}>
          {isAuthenticated ? (
             <div>
                <p>로그인이 완료되었습니다!</p>
-               <button
-                  onClick={() => {
-                     dispatch(logout())
-                  }}
-               >
-                  로그아웃
-               </button>
+               <button onClick={() => dispatch(logout())}>로그아웃</button>
             </div>
          ) : (
             <div>
                <p>로그인하세요!</p>
-               <button
-                  onClick={() => {
-                     dispatch(login())
-                  }}
-               >
-                  로그인
-               </button>
+               <button onClick={() => dispatch(login())}>로그인</button>
             </div>
          )}
       </div>

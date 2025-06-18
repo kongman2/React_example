@@ -1,28 +1,29 @@
-import { useDispatch, useSelector } from 'react-redux'
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 const TodoComponent = () => {
    const [inputValue, setInputValue] = useState('')
    const todos = useSelector((state) => state.todos)
    const dispatch = useDispatch()
 
-   // 추가
+   // 할일 등록
    const handleAddTodo = () => {
       if (inputValue.trim()) {
-         dispatch({ type: 'add', payload: inputValue })
+         // inputValue = '운동하기'
+         dispatch({ type: 'addTodo', payload: inputValue }) // action객체를 reducer의 action 매개변수로 전달
          setInputValue('')
       }
    }
 
-   // 삭제
+   // 할일 삭제
    const handleDeleteTodo = (id) => {
-      dispatch({ type: 'delete', payload: id })
+      dispatch({ type: 'deleteTodo', payload: id })
    }
 
    return (
       <div>
-         <h1>To-Do List</h1>
-         <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="할일 추가" />
+         <h1>Todo List</h1>
+         <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="할 일 추가" />
          <button onClick={handleAddTodo}>추가</button>
 
          <ul>
@@ -35,4 +36,5 @@ const TodoComponent = () => {
       </div>
    )
 }
+
 export default TodoComponent

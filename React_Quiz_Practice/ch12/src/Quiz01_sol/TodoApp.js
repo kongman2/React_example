@@ -9,6 +9,7 @@ function TodoApp() {
 
    return (
       <div>
+         <h1>Todo List</h1>
          <input value={newTodo} onChange={(e) => setNewTodo(e.target.value)} placeholder="할 일 입력" />
          <button onClick={() => dispatch(addTodo(newTodo))}>등록</button>
          <ul>

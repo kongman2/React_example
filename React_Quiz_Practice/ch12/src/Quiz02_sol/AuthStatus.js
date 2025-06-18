@@ -6,7 +6,7 @@ function AuthStatus() {
    const dispatch = useDispatch()
 
    return (
-      <div>
+      <div style={{ padding: '20px' }}>
          {isAuthenticated ? (
             <div>
                <p>로그인이 완료되었습니다!</p>

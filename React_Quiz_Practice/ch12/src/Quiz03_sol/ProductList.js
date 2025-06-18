@@ -8,7 +8,8 @@ function ProductList() {
    const [newProduct, setNewProduct] = useState('')
 
    return (
-      <div>
+      <div style={{ padding: '20px' }}>
+         <h1>상품 등록</h1>
          <input value={newProduct} onChange={(e) => setNewProduct(e.target.value)} placeholder="상품명" />
          <button onClick={() => dispatch(addProduct(newProduct))}>상품 추가</button>
          <ul>
